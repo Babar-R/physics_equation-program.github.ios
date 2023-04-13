@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Prompt the user to select the case
+let caseNum = prompt("Enter the case number (1, 2 or 3):");
+
+// Check which case was selected and prompt the user for the appropriate values
+if (caseNum === "1") {
+  let v = parseFloat(prompt("Enter the value of V:"));
+  let t = parseFloat(prompt("Enter the value of t:"));
+  let s = v * t;
+  document.write(`S = ${s}`);
+} else if (caseNum === "2") {
+  let s = parseFloat(prompt("Enter the value of S:"));
+  let t = parseFloat(prompt("Enter the value of t:"));
+  if (t !== 0) {
+    let v = s / t;
+    document.write(`V = ${v}`);
+  } else {
+    document.write("Error: Division by zero.");
+  }
+} else if (caseNum === "3") {
+  let s = parseFloat(prompt("Enter the value of S:"));
+  let v = parseFloat(prompt("Enter the value of V:"));
+  if (v !== 0) {
+    let t = s / v;
+    document.write(`t = ${t}`);
+  } else {
+    document.write("Error: Division by zero.");
+  }
+} else {
+  document.write("Error: Invalid case number.");
+}
+</script>
+</html>
